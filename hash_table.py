@@ -9,6 +9,8 @@ class HashTable:
     def __init__(self, size=10):
         self.size = size
         self.data = []
+        for i in range(0, size):
+            self.data.append([])
 
     def __setitem__(self, key, val):
         key = val
