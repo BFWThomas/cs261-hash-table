@@ -22,59 +22,59 @@ class TestHashTable(unittest.TestCase):
         except NameError:
             self.fail("Could not instantiate HashTable.")
 
-    # def test_size(self):
-    #     """
-    #     A default HashTable has a size attribute that is 10.
-    #     """
-    #     h = HashTable()
-    #     self.assertEqual(10, h.size)
+    def test_size(self):
+        """
+        A default HashTable has a size attribute that is 10.
+        """
+        h = HashTable()
+        self.assertEqual(10, h.size)
 
-    # def test_instantiation_with_size(self):
-    #     """
-    #     A HashTable can be instantiated with an optional size.
-    #     """
-    #     h = HashTable(33)
-    #     self.assertEqual(33, h.size)
+    def test_instantiation_with_size(self):
+        """
+        A HashTable can be instantiated with an optional size.
+        """
+        h = HashTable(33)
+        self.assertEqual(33, h.size)
 
-    # """
-    # Basic API
-    # """
+    """
+    Basic API
+    """
 
-    # def test_simple_insertion(self):
-    #     h = HashTable()
-    #     try:
-    #         h['foo'] = 'bar'
-    #     except TypeError:
-    #         self.fail("HashTable has no __setitem__ implementation")
+    def test_simple_insertion(self):
+        h = HashTable()
+        try:
+            h['foo'] = 'bar'
+        except TypeError:
+            self.fail("HashTable has no __setitem__ implementation")
 
-    # def test_simple_retrieval(self):
-    #     h = HashTable()
-    #     try:
-    #         _ = h['foo']
-    #     except TypeError:
-    #         self.fail("HashTable has no __getitem__ implementation")
+    def test_simple_retrieval(self):
+        h = HashTable()
+        try:
+            _ = h['foo']
+        except TypeError:
+            self.fail("HashTable has no __getitem__ implementation")
 
-    # def test_hash(self):
-    #     """
-    #     Hash function returns hash no greater than its size - 1.
-    #     """
-    #     h = HashTable(33)
-    #     self.assertEqual(0, h.hash(0))
-    #     self.assertEqual(32, h.hash(32))
-    #     self.assertEqual(0, h.hash(33))
-    #     self.assertEqual(1, h.hash(34))
-    #     self.assertEqual(hash("fake key") % 33, h.hash("fake key"))
+    def test_hash(self):
+        """
+        Hash function returns hash no greater than its size - 1.
+        """
+        h = HashTable(33)
+        self.assertEqual(0, h.hash(0))
+        self.assertEqual(32, h.hash(32))
+        self.assertEqual(0, h.hash(33))
+        self.assertEqual(1, h.hash(34))
+        self.assertEqual(hash("fake key") % 33, h.hash("fake key"))
 
-    # """
-    # Data Storage
-    # """
+    """
+    Data Storage
+    """
 
-    # def test_data(self):
-    #     """
-    #     A HashTable has an internal array for storing k-v pairs.
-    #     """
-    #     h = HashTable()
-    #     self.assertEqual(list, type(h.data))
+    def test_data(self):
+        """
+        A HashTable has an internal array for storing k-v pairs.
+        """
+        h = HashTable()
+        self.assertEqual(list, type(h.data))
 
     # def test_data_contents(self):
     #     """
