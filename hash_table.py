@@ -13,11 +13,15 @@ class HashTable:
             self.data.append([])
 
     def __setitem__(self, key, val):
-        key = val
+        index = self.hash(key)
+        self.data[index].append([key, val])
 
-    def __getitem__(self, item):
-        return item
+    def __getitem__(self, key):
+        index = self.hash(key)
+        if not self.data[index]:
+            return None
+        return self.data[index]
 
-    def hash(self, val):
+    def hash(self, key):
         """Returns a hash value that is smaller than the table size"""
-        return hash(val) % self.size
+        return hash(key) % self.size
