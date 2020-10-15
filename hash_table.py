@@ -31,5 +31,21 @@ class HashTable:
         return self.data[index][0][1]
 
     def hash(self, key):
-        """Returns a hash value that is smaller than the table size"""
+        """
+        Returns a hash value that is smaller than the table size
+        """
         return hash(key) % self.size
+
+    def delete(self, key):
+        """
+        Deletes a key value pair from the hashtable and is unretrievable
+        """
+        index = self.hash(key)
+        self.data[index] = None
+
+    def clear(self):
+        """
+        Clears the hashtable and maintains size
+        """
+        self.__init__(self.size)
+        return
