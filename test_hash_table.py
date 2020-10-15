@@ -108,18 +108,18 @@ class TestHashTable(unittest.TestCase):
         h = HashTable(3)
         self.assertEqual(None, h['foo'])
 
-    # def test_retrieve_one(self):
-    #     """
-    #     The value of an inserted k-v pair is retrievable.
-    #     """
-    #     h = HashTable(3)
-    #     h['foo'] = 'bar'
-    #     self.assertEqual('bar', h['foo'])
+    def test_retrieve_one(self):
+        """
+        The value of an inserted k-v pair is retrievable.
+        """
+        h = HashTable(3)
+        h['foo'] = 'bar'
+        self.assertEqual('bar', h['foo'])
 
     # """
     # Insertion
     # """
-
+    #
     # def test_insert_two(self):
     #     """
     #     Inserting two k-v pairs stores them as two-element arrays in the list
@@ -130,8 +130,8 @@ class TestHashTable(unittest.TestCase):
     #     h[11] = 'bar'
     #     self.assertEqual([[9, 'foo']], h.data[0])
     #     self.assertEqual([[11, 'bar']], h.data[2])
-
-    # def test_insert_existing(self):
+    #
+    # # def test_insert_existing(self):
     #     """
     #     Inserting a k-v pair where the key already exists overwrites the old value.
     #     """

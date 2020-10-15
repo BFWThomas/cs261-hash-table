@@ -20,7 +20,7 @@ class HashTable:
         index = self.hash(key)
         if not self.data[index]:
             return None
-        return self.data[index]
+        return self.data[index][0][1]
 
     def hash(self, key):
         """Returns a hash value that is smaller than the table size"""
