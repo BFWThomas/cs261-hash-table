@@ -183,16 +183,16 @@ class TestHashTable(unittest.TestCase):
         h = HashTable()
         self.assertEqual([], h.keys())
 
-    # def test_keys(self):
-    #     """
-    #     A HashTable can produce a list of its keys.
-    #     """
-    #     h = HashTable()
-    #     h['foo'] = 'bar'
-    #     h['baz'] = 'qux'
-    #     keys = h.keys()
-    #     keys.sort()
-    #     self.assertEqual(['baz', 'foo'], keys)
+    def test_keys(self):
+        """
+        A HashTable can produce a list of its keys.
+        """
+        h = HashTable()
+        h['foo'] = 'bar'
+        h['baz'] = 'qux'
+        keys = h.keys()
+        keys.sort()
+        self.assertEqual(['baz', 'foo'], keys)
 
 
     # def test_initial_values(self):

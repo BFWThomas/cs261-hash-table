@@ -54,4 +54,9 @@ class HashTable:
         """
         Returns a list of all keys in the hashtable
         """
-        return []
+        keys = []
+        for i in self.data:
+            if i:
+                for j in i:
+                    keys.append(j[0])
+        return keys
