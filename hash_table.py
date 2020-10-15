@@ -14,10 +14,15 @@ class HashTable:
 
     def __setitem__(self, key, val):
         index = self.hash(key)
-        if self.__getitem__(key) is None:
+        if self.__getitem__(key):
+            for i in self.data[index]:
+                if i[0] == key:
+                    self.data[index][0][1] = val
+                    return
             self.data[index].append([key, val])
+
         else:
-            self.data[index][0][1] = val
+            self.data[index].append([key, val])
 
     def __getitem__(self, key):
         index = self.hash(key)
