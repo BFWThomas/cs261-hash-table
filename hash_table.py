@@ -49,3 +49,9 @@ class HashTable:
         """
         self.__init__(self.size)
         return
+
+    def keys(self):
+        """
+        Returns a list of all keys in the hashtable
+        """
+        return []
