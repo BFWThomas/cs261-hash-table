@@ -60,3 +60,14 @@ class HashTable:
                 for j in i:
                     keys.append(j[0])
         return keys
+
+    def values(self):
+        """
+        Returns a list of all values in the hash table
+        """
+        values = []
+        for i in self.data:
+            if i:
+                for j in i:
+                    values.append(j[1])
+        return values
